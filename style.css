@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body{
+    color: white;
+}
 
 .sfondoTop {
     background-color: rgb(26, 101, 92);
@@ -29,16 +31,41 @@
     height: calc(100%-3.75rem);
     display: flex;
 }
-
+/* sinistra */
 .majorSX{
     width: 35%;
     background-color: rebeccapurple;
     height: 100%;
 }
 
+header{
+    background-color: black;
+    height: 3.125rem;
+}
+
+.notifiche {
+    background-color: lightgreen;
+    height: 4.375rem;
+}
+
+.search{
+    background-color: lightgoldenrodyellow;
+    height: 30px;
+}
+/* destra */
 
 .majorDX{
     width: 65%;
     background-color: lightcoral;
     height: 100%;
+}
+
+.text{
+    background-color: darkblue;
+    height: calc(100% - 6.875rem);
+}
+footer{
+    background-color: red;
+    height: 3.75rem;
+    
 }
