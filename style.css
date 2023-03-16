@@ -1,7 +1,44 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{background-color: lightskyblue;}
+
+.sfondoTop {
+    background-color: rgb(26, 101, 92);
+    height: 15vh;
+}
+
+
+.sfondoBottom {
+    background-color: lightgrey;
+    height: 85vh;
+    position: relative;
+}
+
+
+.container {
+    background-color: beige;
+    position: absolute;
+    top: 1.875rem;
+    bottom:1.875rem ;
+    right: 6.25rem;
+    left:6.25rem;  
+    width: calc(100%-12.5rem);
+    height: calc(100%-3.75rem);
+    display: flex;
+}
+
+.majorSX{
+    width: 35%;
+    background-color: rebeccapurple;
+    height: 100%;
+}
+
+
+.majorDX{
+    width: 65%;
+    background-color: lightcoral;
+    height: 100%;
+}
