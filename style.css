@@ -5,6 +5,7 @@
 }
 body{
     color: white;
+    font-family: 'Lato', sans-serif;
 }
 
 .sfondoTop {
@@ -41,17 +42,56 @@ body{
 header{
     background-color: black;
     height: 3.125rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.icone{
+    padding: 20px;
+    font-size: large;
+}
+
+.fa-solid{
+    padding: 5px;
 }
 
 .notifiche {
-    background-color: lightgreen;
+    background-color: lightblue;
     height: 4.375rem;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+}
+
+.rap{
+    padding-left: 10px;
+}
+
+.bell{
+    background-color: lightgray;
+    border: 20px;
+    border-radius: 55px;
+}
+
+.attiva{
+    text-decoration: underline;
 }
 
 .search{
     background-color: lightgoldenrodyellow;
     height: 30px;
+    display: flex;
+    justify-content: center;
+    padding:5px 0px ;
+
 }
+
+.find{
+    width: 97%;
+    padding: 5px;
+}
+
 /* destra */
 
 .majorDX{
@@ -69,5 +109,22 @@ header{
 footer{
     background-color: red;
     height: 3.75rem;
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0px 20px;
+}
+
+.write{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+.fa-face-smile{
+    padding-right: 30px;
+}
+
+.fa-microphone{
+    padding-left: 30px;
 }

@@ -11,6 +11,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--  font-awesome -->
     <title>vue-boolzapp</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <!-- font -->
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,16 +25,46 @@
     <div class="sfondoBottom"></div>
     <div class="container">
         <div class="majorSX">
-            <header> Personal info</header>
-            <div class="notifiche"> notifiche</div>
-            <div class="search">cerca</div>
+            <header>
+                <div class="pic">pic</div>
+                <div class="icone">
+                    <i class="fa-sharp fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
 
+                </div>
+
+            </header>
+            <div class="notifiche">
+                <div class="bell"><i class="fa-solid fa-bell-slash"></i></div>
+                <div class="rap">
+                    <div class="ricevi">Ricevi notifiche di nuovi messaggi</div>
+                    <div class="attiva">Attiva notifiche desktop</div>
+                </div>
+            </div>
+            <div class="search">
+                <input class="find" type="text"  placeholder="&#xF002; Cerca o inzia una nuova chat" style="font-family:Arial, FontAwesome;">
+            </div>
+ 
         </div>
         <div class="majorDX">
-            <header>chat info</header>
+            <header>
+                <div class="pic">pic</div>
+                <div class="icone">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                     <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                </div>
+            </header>
             <div class="text">
             </div>
-            <footer>scrivi un messaggio</footer>
+            <footer>
+                <div class="smile"><i class="fa-regular fa-face-smile"></i></div>
+                <input class="write" type="text" placeholder="scrivi un messaggio">
+                <div class="talk"><i class="fa-solid fa-microphone"></i></div>
+                
+               </footer>
         </div>
     </div>
     <!--Vue from CDN-->
