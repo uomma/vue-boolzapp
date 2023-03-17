@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.sfondoTop {
+    background-color: rgb(26, 101, 92);
+    height: 15vh;
+}
+
+
+.sfondoBottom {
+    background-color: lightgrey;
+    height: 85vh;
+    position: relative;
+}
+
+
+.container {
+    background-color: rgb(222, 222, 217);
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    right: 100px;
+    left: 100px;
+    width: calc(100%-200px);
+    height: calc(100%-60px);
+    display: flex;
+}
+
+/* sinistra */
+.majorSX {
+    width: 35%;
+    background-color: white;
+}
+
+header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(222, 222, 217);
+    border-right: 0.0625rem solid gray;
+}
+
+.pic {
+    display: flex;
+    align-items: center;
+}
+
+.icone {
+    padding: 1.25rem;
+    font-size: large;
+}
+
+.fa-solid {
+    padding: 0.3125rem;
+    color: rgb(98, 97, 97);
+}
+
+.notifiche {
+    background-color: lightskyblue;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0rem 0.625rem 0rem 0.625rem;
+}
+
+.rap {
+    padding-left: 0.625rem;
+}
+
+.bell {
+    border-radius: 2.1875rem;
+    background-color: white;
+}
+
+.fa-bell-slash {
+    padding: 0.625rem;
+    color: lightskyblue;
+
+}
+
+.attiva {
+    text-decoration: underline;
+}
+
+.search {
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.3125rem 0rem;
+    background-color: white;
+}
+
+.find {
+    width: 97%;
+    padding: 0.3125rem;
+}
+
+.contact-mex {
+    height: 100%;
+    background-color: white;
+
+}
+
+.contact-name {
+    display: flex;
+    padding: 0.3125rem;
+    justify-content: space-between;
+    border-bottom: 0.0625rem solid rgb(212, 211, 211);
+
+}
+
+.contact-avatar {
+    display: flex;
+}
+
+.ich {
+    font-size: large;
+    color: black;
+    font-weight: 700;
+}
+
+.img-avatar {
+    width: 2.5rem;
+    border-radius: 3.125rem;
+    margin-right: 0.9375rem;
+    margin-left: 0.3125rem;
+}
+
+/* destra */
+
+.majorDX {
+    width: 65%;
+    height: 100%;
+}
+
+.text {
+    height: calc(100% - 110px);
+    background-image: url(IMG/mine.jpg);
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.recived {
+    background-color: white;
+    border-radius: 5px;
+    width: 300px;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.io {
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sent {
+    background-color: rgb(144, 233, 134);
+    border-radius: 5px;
+    width: 300px;
+    padding: 5px;
+
+}
+
+.recived-text, .sent-text {
+    padding-left: 3px;
+}
+
+.recived-time, .sent-time {
+    display: flex;
+    justify-content: end;
+    font-size: 8px;
+}
+
+footer {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1.25rem;
+}
+
+.write {
+    width: 100%;
+    height: 3.125rem;
+    padding: 0.625rem;
+}
+
+.fa-face-smile {
+    padding-right: 1.875rem;
+}
+
+.fa-microphone {
+    padding-left: 1.875rem;
+}
