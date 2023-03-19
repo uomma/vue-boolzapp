@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            contactView: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -28,7 +29,7 @@ createApp({
                 },
                 {
                     name: 'Fabio',
-                    avatar: 'img/avatar_2.jpg' ,
+                    avatar: 'img/avatar_2.jpg',
                     visible: true,
                     messages: [
                         {
@@ -50,7 +51,7 @@ createApp({
                 },
                 {
                     name: 'Samuele',
-                    avatar:'img/avatar_3.jpg',
+                    avatar: 'img/avatar_3.jpg',
                     visible: true,
                     messages: [
                         {
@@ -164,8 +165,17 @@ createApp({
                             status: 'received'
                         }
                     ],
-                }
+                },
+
             ]
+
         }
     },
-  }).mount('#app');
+
+    methodds: {
+
+        
+
+    }
+
+}).mount('#app');

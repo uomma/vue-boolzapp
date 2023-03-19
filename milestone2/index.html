@@ -59,7 +59,7 @@
                             <div class="contact-avatar">
                                 <img :src="contact.avatar" alt="avatar" class="img-avatar">
                                 <div>
-                                    <div class="ich"> {{ contact.name }} </div>
+                                    <div class="ich"> {{contact.name}} </div>
                                     <div class="last-text">Ultimo messaggio inviato</div>
                                 </div>
                             </div>
@@ -84,27 +84,21 @@
 
                     </div>
                 </header>
-                <div class="text">
+                <div v-for="message in contacts[contactView].messages" class="text">
 
                     <div class="recived">
-                        <div class="recived-text">recived</div>
-                        <div class="recived-time">12:00</div>
+                        <div class="recived-text">{{message.message}}</div>
+                        <div class="recived-time">{{message.date}} </div>
                     </div>
 
-                    <div class="io">
+                 <!--   <div class="io">
                         <div class="sent">
-                            <div class="sent-text">sent</div>
-                            <div class="sent-time">12:00</div>
+                            <div class="sent-text">{{message.message}}</div>
+                            <div class="sent-time">{{message.date}}</div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="io">
-                        <div class="sent">
-                            <div class="sent-text">sent</div>
-                            <div class="sent-time">12:00</div>
-                        </div>
-                    </div>
-                </div>
+                    
                 <footer>
                     <div class="smile"><i class="fa-solid fa-face-smile"></i></div>
                     <input class="write" type="text" placeholder="Scrivi un messaggio">
