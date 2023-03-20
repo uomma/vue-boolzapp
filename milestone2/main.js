@@ -3,7 +3,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            contactView: 0,
+            contactViewed: 0,
+            Shown: false,
             contacts: [
                 {
                     name: 'Michele',
@@ -172,10 +173,16 @@ createApp({
         }
     },
 
-    methodds: {
-
-        
-
+    methods: {
+        contactView(index) {
+            this.contactViewed = index;
+        },
+        contactShown(index) {
+            if (this.contactViewed === index) {
+                return true;
+            }
+            return false;
+        }
     }
 
 }).mount('#app');

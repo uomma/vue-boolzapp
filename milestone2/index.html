@@ -55,10 +55,10 @@
                     </div>
 
                     <div class="contact-mex">
-                        <div class="contact-name" v-for="contact in contacts">
+                        <div class="contact-name"  :class="contactShown(index)  " v-for="(contact, index) in contacts" @click="contactView(index)">
                             <div class="contact-avatar">
                                 <img :src="contact.avatar" alt="avatar" class="img-avatar">
-                                <div>
+                                <div>       
                                     <div class="ich"> {{contact.name}} </div>
                                     <div class="last-text">Ultimo messaggio inviato</div>
                                 </div>
@@ -74,8 +74,8 @@
             <div class="majorDX">
                 <header>
                     <div class="pic">
-                        <img src="img/avatar_1.jpg" alt="MY avatar" class="img-avatar">
-                        <div class="myname">Michele</div>
+                        <img :src="contacts[contactViewed].avatar" alt="MY avatar" class="img-avatar">
+                        <div class="myname">{{contacts[contactViewed].name}}</div>
                     </div>
                     <div class="icone">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -84,7 +84,7 @@
 
                     </div>
                 </header>
-                <div v-for="message in contacts[contactView].messages">
+                <div v-for="message in contacts[contactViewed].messages">
                     <div class="text">
                         <div class="received" :class="message.status">
                             <div class="received-text">{{message.message}} </div>
