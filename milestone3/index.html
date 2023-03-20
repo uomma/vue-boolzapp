@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--  font-awesome -->
+    <title>vue-boolzapp</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <!-- font -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="sfondoTop"></div>
+        <div class="sfondoBottom"></div>
+        <div class="container">
+            <!-- SINISTRA -->
+            <div class="majorSX">
+                <header>
+                    <div class="pic">
+                        <img src="img/avatar_8.jpg" alt="MY avatar" class="img-avatar">
+                        <div class="myname">MARCELLO</div>
+                    </div>
+                    <div class="icone">
+                        <i class="fa-sharp fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                    </div>
+
+
+                </header>
+                <main>
+                    <div class="notifiche">
+                        <div class="bell"><i class="fa-solid fa-bell-slash"></i></div>
+                        <div class="rap">
+                            <div class="ricevi">Ricevi notifiche di nuovi messaggi</div>
+                            <div class="attiva">Attiva notifiche desktop</div>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <input class="find" type="text" placeholder="&#xF002; Cerca o inzia una nuova chat"
+                            style="font-family:Arial, FontAwesome;">
+                    </div>
+
+                    <div class="contact-mex">
+                        <div class="contact-name"  :class="contactShown(index)  " v-for="(contact, index) in contacts" @click="contactView(index)">
+                            <div class="contact-avatar">
+                                <img :src="contact.avatar" alt="avatar" class="img-avatar">
+                                <div>       
+                                    <div class="ich"> {{contact.name}} </div>
+                                    <div class="last-text">Ultimo messaggio inviato</div>
+                                </div>
+                            </div>
+                            <div class="text-time">12:00</div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+
+            <!-- DESTRA -->
+            <div class="majorDX">
+                <header>
+                    <div class="pic">
+                        <img :src="contacts[contactViewed].avatar" alt="MY avatar" class="img-avatar">
+                        <div class="myname">{{contacts[contactViewed].name}}</div>
+                    </div>
+                    <div class="icone">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                    </div>
+                </header>
+                <div v-for="message in contacts[contactViewed].messages">
+                    <div class="text">
+                        <div class="received" :class="message.status">
+                            <div class="received-text">{{message.message}} </div>
+                            <div class="received-time">{{message.date}} </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <footer>
+                    <div class="jj">
+                        <div class="smile"><i class="fa-solid fa-face-smile"></i></div>
+                        <input class="write" type="text" placeholder="Scrivi un messaggio">
+                        <div class="talk"><i class="fa-solid fa-microphone"></i></div>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+        <!--Vue from CDN-->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!--Vue from CDN-->
+
+        <script src="main.js"></script>
+</body>
+
+</html>
