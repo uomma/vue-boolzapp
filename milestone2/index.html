@@ -38,7 +38,7 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
 
                     </div>
-                    
+
 
                 </header>
                 <main>
@@ -84,35 +84,32 @@
 
                     </div>
                 </header>
-                <div v-for="message in contacts[contactView].messages" class="text">
-
-                    <div class="recived">
-                        <div class="recived-text">{{message.message}}</div>
-                        <div class="recived-time">{{message.date}} </div>
+                <div v-for="message in contacts[contactView].messages">
+                    <div class="text">
+                        <div class="received" :class="message.status">
+                            <div class="received-text">{{message.message}} </div>
+                            <div class="received-time">{{message.date}} </div>
+                        </div>
                     </div>
 
-                 <!--   <div class="io">
-                        <div class="sent">
-                            <div class="sent-text">{{message.message}}</div>
-                            <div class="sent-time">{{message.date}}</div>
-                        </div>
-                    </div> -->
 
-                    
+                </div>
+
                 <footer>
-                    <div class="smile"><i class="fa-solid fa-face-smile"></i></div>
-                    <input class="write" type="text" placeholder="Scrivi un messaggio">
-                    <div class="talk"><i class="fa-solid fa-microphone"></i></div>
-
+                    <div class="jj">
+                        <div class="smile"><i class="fa-solid fa-face-smile"></i></div>
+                        <input class="write" type="text" placeholder="Scrivi un messaggio">
+                        <div class="talk"><i class="fa-solid fa-microphone"></i></div>
+                    </div>
                 </footer>
+
             </div>
         </div>
-    </div>
-    <!--Vue from CDN-->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!--Vue from CDN-->
+        <!--Vue from CDN-->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!--Vue from CDN-->
 
-    <script src="main.js"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>
