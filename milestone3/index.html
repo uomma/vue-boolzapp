@@ -98,7 +98,7 @@
                 <footer>
                     <div class="jj">
                         <div class="smile"><i class="fa-solid fa-face-smile"></i></div>
-                        <input class="write" type="text" placeholder="Scrivi un messaggio">
+                        <input class="write" type="text" placeholder="Scrivi un messaggio" v-model="newText" @keyup.enter="addObj">
                         <div class="talk"><i class="fa-solid fa-microphone"></i></div>
                     </div>
                 </footer>

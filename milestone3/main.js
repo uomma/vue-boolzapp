@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            newText: "",
             contactViewed: 0,
             Shown: false,
             contacts: [
@@ -182,7 +183,17 @@ createApp({
                 return true;
             }
             return false;
-        }
+        },
+
+        addObj() {
+            if (this.newText !== "") {
+                let {date, message, status} = this.contacts[this.contactViewed].messages;
+                message = this.newText;
+                this.contacts[this.contactViewed].messages.push({ date, message, status })
+                this.newText = "";
+            }
+
+        },
     }
 
 }).mount('#app');

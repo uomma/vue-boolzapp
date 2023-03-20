@@ -46,6 +46,7 @@ header {
     align-items: center;
     background-color: rgb(222, 222, 217);
     border-right: 0.0625rem solid gray;
+    
 }
 
 .pic {
@@ -139,6 +140,7 @@ header {
 .majorDX {
     width: 65%;
     background-image: url(IMG/mine.jpg);
+    overflow: auto;
 }
 
 
